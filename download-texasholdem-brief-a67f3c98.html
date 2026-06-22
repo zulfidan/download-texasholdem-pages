@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>德州扑克下载 · 策略与竞技入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2f4f6;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* 卡片基础样式 */
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e4e9ef;
+            padding: 2rem 1.8rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Hero 区域 —— 主视觉卡片 */
+        .hero {
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e4e9ef;
+            padding: 2.8rem 2.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 2px;
+            background: #2c7be5;
+            margin: 1.2rem auto 0;
+            border-radius: 4px;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0f1a2c;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #4a5a6e;
+            max-width: 680px;
+            margin: 0.4rem auto 0;
+        }
+
+        /* 用途卡片网格 */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.6rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #142130;
+            border-left: 3px solid #2c7be5;
+            padding-left: 0.7rem;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: #142130;
+        }
+
+        .card p, .card li {
+            color: #2c3b4e;
+            font-size: 0.98rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            padding: 0.2rem 0 0.2rem 1.2rem;
+            position: relative;
+        }
+
+        .card li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #2c7be5;
+            font-weight: 500;
+        }
+
+        /* 适合人群 + 自然链接段落 双栏 */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 1.6rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .inline-link {
+            color: #1c5dbb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.15s;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: #1c5dbb;
+            color: #0f3d7a;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.1rem;
+            color: #142130;
+        }
+
+        .faq-item p {
+            color: #2c3b4e;
+            font-size: 0.96rem;
+        }
+
+        /* 底部 */
+        .footer {
+            text-align: center;
+            padding: 1.8rem 0 0.4rem;
+            font-size: 0.85rem;
+            color: #6b7f94;
+            border-top: 1px solid #dfe5ed;
+            margin-top: 1.5rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 720px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1.2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
+
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .card h2 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Hero 主视觉 -->
+    <div class="hero">
+        <h1>德州扑克 · 策略与平衡</h1>
+        <p>从底池赔率到范围构建，从翻前博弈到河牌价值——理解游戏的底层逻辑，比短期运气更重要。</p>
+    </div>
+
+    <!-- 用途卡片：三个细分场景 -->
+    <div class="grid-3">
+        <div class="card">
+            <h2>学习与训练</h2>
+            <p>针对翻前范围、翻后下注尺度以及位置优势，提供结构化练习场景。无论是初学者系统建立手牌选择框架，还是进阶玩家打磨 3-bet 与防守范围，都能找到对应模块。可通过 <a href="https://download-texasholdem.com" class="inline-link">德州扑克下载</a> 获取练习版本。</p>
+        </div>
+        <div class="card">
+            <h2>线下与朋友对局</h2>
+            <p>家庭局、朋友聚会、小型锦标赛——适合 4–9 人灵活组局，支持自定义筹码结构和盲注时间。无需复杂配置，专注读人、马脚与心理层面。配合 <a href="https://download-texasholdem.com" class="inline-link">德州扑克下载</a> 可快速开始线下模拟或线上私人桌。</p>
+        </div>
+        <div class="card">
+            <h2>赛事与竞技模拟</h2>
+            <p>SNG、MTT 以及常规桌均可自由切换，内置 ICM 计算辅助和手牌回放。适合希望系统性复盘锦标赛决策、练习短码生存策略的玩家。通过 <a href="https://download-texasholdem.com" class="inline-link">德州扑克下载</a> 可以体验多桌锦标赛节奏。</p>
+        </div>
+    </div>
+
+    <!-- 两栏：适合人群 + 自然链接段落（介绍类内容） -->
+    <div class="two-col">
+        <div class="card">
+            <h2>适合人群</h2>
+            <ul>
+                <li>希望从规则学习过渡到策略思考的入门者</li>
+                <li>想在朋友对局中提升盈利能力的娱乐玩家</li>
+                <li>研究范围平衡、剥削倾向的中级爱好者</li>
+                <li>对锦标赛 ICM 与泡沫阶段感兴趣的竞技玩家</li>
+                <li>寻找干净、无干扰练习环境的严肃练习者</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>关于策略与工具</h2>
+            <p>现代德州扑克的复杂程度远超“猜对方有什么牌”。优秀的玩家会利用位置、底池控制、阻隔牌以及频率概念构建决策树。一款功能扎实的客户端可以帮助你反复测试不同翻牌面的持续下注策略、练习 3-bet 底池的翻后玩法，并且不依赖真实筹码压力。如果你希望将理论转化为肌肉记忆，不妨通过 <a href="https://download-texasholdem.com" class="inline-link">德州扑克下载</a> 获取一款匹配自身节奏的客户端，专注在牌局决策本身。</p>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要卡片（精简摘要，不展开所有） -->
+    <div class="card" style="margin-bottom: 1.8rem;">
+        <h2>常见问题摘要</h2>
+        <div class="faq-item">
+            <strong>需要注册或付费吗？</strong>
+            <p>多数基本功能和练习模式无需付费，部分高级统计模块或自定义锦标赛可能需要一次性解锁，具体视版本而定。建议通过 <a href="https://download-texasholdem.com" class="inline-link">德州扑克下载</a> 查看当前版本详情。</p>
+        </div>
+        <div class="faq-item">
+            <strong>是否支持中文界面？</strong>
+            <p>支持完整中文菜单、手牌注释以及辅助提示，降低语言门槛，便于专注于策略本身。</p>
+        </div>
+        <div class="faq-item">
+            <strong>对电脑配置有要求吗？</strong>
+            <p>主流 Windows / macOS 均可流畅运行，集成显卡即可应对 2D 界面与牌桌渲染，无需高性能硬件。</p>
+        </div>
+    </div>
+
+    <!-- 简短提示 -->
+    <div style="text-align: right; padding: 0.2rem 0 0; font-size: 0.9rem; color: #4a5a6e;">
+        <span style="background: #eef2f7; padding: 0.2rem 0.8rem; border-radius: 30px; border: 1px solid #d9e1eb;">从范围思考开始，而非看牌</span>
+    </div>
+
+    <div class="footer">
+        <span>策略向德州扑克资源 · 理性游戏，循序渐进</span>
+    </div>
+
+</div>
+</body>
+</html>
